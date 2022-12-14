@@ -53,3 +53,48 @@ To use this script, you will need to have Terraform installed on your machine. Y
 
 Initialize the Terraform working directory: terraform init
 
+
+give me a values.yaml file  helm chart to install thanos on kubernetes cluster
+
+# Contents of values.yaml
+
+# Global settings
+global:
+  image:
+    registry: quay.io/thanos
+    repository: thanos
+    tag: v0.9.2
+
+# Sidecar settings
+sidecar:
+  enabled: true
+  image:
+    registry: quay.io/thanos
+    repository: thanos-sidecar
+    tag: v0.9.2
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "100m"
+  service_account: "thanos-sidecar"
+
+# Store settings
+store:
+  enabled: true
+  image:
+    registry: quay.io/thanos
+    repository: thanos-store
+    tag: v0.9.2
+  resources:
+    requests:
+      memory: "128Mi"
+      cpu: "200m"
+  service_account: "thanos-store"
+
+# Query settings
+query:
+  enabled: true
+  image:
+    registry: quay.io/thanos
+    repository: thanos-query
+    tag:

@@ -98,3 +98,25 @@ query:
     registry: quay.io/thanos
     repository: thanos-query
     tag:
+
+
+
+show me all the values.yaml variable for helm  stable/wordpress
+As a large language model trained by OpenAI, I am not able to browse the internet or access specific files on your system. I do not have the ability to provide you with the values.yaml file for the Helm chart stable/wordpress.
+
+However, the values.yaml file is a configuration file that is used to customize the resources that are created by the chart. You can use this file to specify values for various chart settings, such as the WordPress admin password or the name of the database to use. You can find a list of the available chart settings and their default values in the chart's documentation or by running the helm show values command.
+
+Here is an example of how you might use the values.yaml file to customize the WordPress chart:
+
+Copy code
+# Set the WordPress admin password
+wordpressAdminPassword: "mysecretpassword"
+
+# Set the name of the database to use
+database:
+  name: "mydatabase"
+You can then use this values.yaml file when you install the chart using the helm install command. For example:
+
+Copy code
+helm install stable/wordpress --values values.yaml
+Keep in mind that this is just an example, and you will need to customize the values to fit your specific needs. For more information, you can check the chart's documentation or ask for assistance in a Helm or Kubernetes forum or community.

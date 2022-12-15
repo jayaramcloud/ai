@@ -1,3 +1,6 @@
+For Ops:
+ physical man pages, man command, Yahoo/Google, AI.
+ 
 https://chat.openai.com/chat
 
 write me a go language function to iterate over an array and log the value of the index
